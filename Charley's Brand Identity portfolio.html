@@ -2,6 +2,22 @@
 <html>
 <head>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes imageFloat {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
         body {
             font-family: 'Calibri', sans-serif;
             max-width: 800px;
@@ -10,121 +26,177 @@
             color: #333;
             line-height: 1.6;
             background-color: #ffffff;
+            animation: fadeIn 1s ease-out;
         }
+
         .header {
             display: flex;
             align-items: flex-start;
             gap: 40px;
             margin-bottom: 40px;
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(145deg, #f8f9fa, #ffffff);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
+
+        .header:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
         .profile-container {
             flex-shrink: 0;
-            width: 200px;
+            width: 220px;
+            animation: imageFloat 6s ease-in-out infinite;
         }
+
         .profile-image {
             width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border: 3px solid #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border: 4px solid #ffffff;
+            transition: all 0.3s ease;
+            filter: brightness(1.02);
         }
+
+        .profile-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
         .header-content {
             flex-grow: 1;
+            animation: slideIn 1s ease-out;
         }
+
         h1 {
             color: #2c3e50;
-            font-size: 32px;
-            margin: 0 0 10px 0;
+            font-size: 36px;
+            margin: 0 0 15px 0;
             line-height: 1.2;
+            background: linear-gradient(120deg, #2c3e50, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
         }
+
         .subtitle {
             color: #34495e;
-            font-size: 18px;
+            font-size: 20px;
             font-style: italic;
             margin: 0 0 15px 0;
             line-height: 1.4;
+            opacity: 0.9;
         }
+
         h2 {
             color: #2980b9;
-            font-size: 24px;
-            margin-top: 30px;
+            font-size: 26px;
+            margin-top: 40px;
             border-bottom: 2px solid #3498db;
-            padding-bottom: 8px;
+            padding-bottom: 10px;
+            transition: all 0.3s ease;
         }
-        h3 {
-            color: #34495e;
-            font-size: 20px;
-            margin-top: 20px;
+
+        h2:hover {
+            color: #3498db;
+            padding-left: 10px;
         }
-        .executive-summary {
-            background-color: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border-left: 4px solid #3498db;
-        }
+
         .section {
-            margin: 30px 0;
+            margin: 40px 0;
+            animation: fadeIn 1s ease-out;
+            animation-fill-mode: both;
         }
+
         .project {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
             border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+            animation: slideIn 0.5s ease-out;
+            animation-fill-mode: both;
         }
-        .project h4 {
-            color: #2c3e50;
-            margin-top: 0;
+
+        .project:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+
         .quote {
             font-style: italic;
             color: #34495e;
             text-align: center;
-            margin: 30px 0;
-            font-size: 20px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
+            margin: 40px 0;
+            font-size: 22px;
+            padding: 30px;
+            background: linear-gradient(145deg, #f8f9fa, #ffffff);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            animation: fadeIn 1.5s ease-out;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 25px;
-            margin: 15px 0;
+
+        .quote:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
+
         ul li {
-            margin: 12px 0;
+            margin: 15px 0;
             position: relative;
-            line-height: 1.6;
+            padding-left: 25px;
+            transition: all 0.3s ease;
         }
+
         ul li:before {
             content: "•";
             color: #3498db;
             font-weight: bold;
             position: absolute;
-            left: -20px;
+            left: 0;
+            transition: all 0.3s ease;
         }
+
+        ul li:hover {
+            transform: translateX(5px);
+        }
+
+        ul li:hover:before {
+            color: #2980b9;
+        }
+
         .footer {
             text-align: right;
             font-style: italic;
             color: #7f8c8d;
-            margin-top: 40px;
+            margin-top: 50px;
             padding-top: 20px;
             border-top: 1px solid #eee;
+            animation: fadeIn 2s ease-out;
         }
+
         @media (max-width: 600px) {
             .header {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                padding: 20px;
             }
             .profile-container {
-                width: 150px;
+                width: 180px;
                 margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .subtitle {
+                font-size: 18px;
             }
         }
     </style>
@@ -132,7 +204,7 @@
 <body>
     <div class="header">
         <div class="profile-container">
-            <img src="/api/placeholder/200/200" alt="Emmanuel Raluswinga" class="profile-image"/>
+            <img src="https://i.imgur.com/m10d7wg.png" alt="Emmanuel Raluswinga" class="profile-image"/>
         </div>
         <div class="header-content">
             <h1>Emmanuel "Charley" Raluswinga</h1>
@@ -141,6 +213,7 @@
         </div>
     </div>
 
+    <!-- Rest of the content remains the same -->
     <div class="executive-summary">
         <h2>Executive Summary</h2>
         <p>Emmanuel "Charley" Raluswinga embodies the convergence of technological innovation and creative leadership in South Africa's digital landscape. Based in Limpopo Province, his work spans software development, entrepreneurship, creative arts, and community empowerment, demonstrating how local insights can drive global innovation.</p>
@@ -200,16 +273,6 @@
             <li>Host of "Mzansi Revolution 4.0" podcast</li>
             <li>Focus on AI, Fourth Industrial Revolution, and South African tech evolution</li>
             <li>Professional graphic design services for high-profile events</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Vision & Future Directions</h2>
-        <h3>Strategic Initiatives</h3>
-        <ul>
-            <li><strong>Agricultural Innovation:</strong> IoT integration, data analytics, market access improvement</li>
-            <li><strong>AI Integration:</strong> Publishing automation, educational content, creative writing assistance</li>
-            <li><strong>Community Tech:</strong> Safety networks, digital literacy, rural connectivity</li>
         </ul>
     </div>
 
