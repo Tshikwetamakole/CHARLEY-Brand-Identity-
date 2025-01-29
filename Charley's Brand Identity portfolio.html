@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+        .header {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 40px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .profile-container {
+            flex-shrink: 0;
+            width: 200px;
+        }
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 3px solid #ffffff;
+        }
+        .header-content {
+            flex-grow: 1;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+        .subtitle {
+            color: #34495e;
+            font-size: 18px;
+            font-style: italic;
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        h3 {
+            color: #34495e;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .executive-summary {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #3498db;
+        }
+        .section {
+            margin: 30px 0;
+        }
+        .project {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        .project h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .quote {
+            font-style: italic;
+            color: #34495e;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        ul li {
+            margin: 12px 0;
+            position: relative;
+            line-height: 1.6;
+        }
+        ul li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: -20px;
+        }
+        .footer {
+            text-align: right;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-container {
+                width: 150px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="profile-container">
+            <img src="/api/placeholder/200/200" alt="Emmanuel Raluswinga" class="profile-image"/>
+        </div>
+        <div class="header-content">
+            <h1>Emmanuel "Charley" Raluswinga</h1>
+            <p class="subtitle">Innovating at the Intersection of Technology, Creativity, and Social Impact</p>
+            <p>Software Developer | Entrepreneur | Creative Leader</p>
+        </div>
+    </div>
+
+    <div class="executive-summary">
+        <h2>Executive Summary</h2>
+        <p>Emmanuel "Charley" Raluswinga embodies the convergence of technological innovation and creative leadership in South Africa's digital landscape. Based in Limpopo Province, his work spans software development, entrepreneurship, creative arts, and community empowerment, demonstrating how local insights can drive global innovation.</p>
+    </div>
+
+    <div class="section">
+        <h2>Core Identity & Expertise</h2>
+        
+        <h3>Technology Leadership</h3>
+        <ul>
+            <li><strong>Software Development:</strong> Expert in C#, .NET MAUI, PostgreSQL, full-stack development (HTML/CSS/JavaScript)</li>
+            <li><strong>Recent Achievement:</strong> 2nd Place Winner at Standard Bank Hackathon 2024, showcasing innovative Android development skills</li>
+            <li><strong>AI Innovation:</strong> Creator of custom GPT models including Muse (creative writing) and Web Development Professor</li>
+        </ul>
+
+        <h3>Signature Projects</h3>
+        <div class="project">
+            <h4>Hyka</h4>
+            <ul>
+                <li>Innovative ride-sharing platform</li>
+                <li>Addresses South African transportation challenges</li>
+                <li>Focus on local market dynamics and accessibility</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h4>AgroConnect Limpopo</h4>
+            <ul>
+                <li>Agricultural technology platform</li>
+                <li>Connects farmers with markets and resources</li>
+                <li>Leverages regional agricultural expertise</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h4>Community Connect</h4>
+            <ul>
+                <li>Real-time community safety application</li>
+                <li>Neighborhood empowerment focus</li>
+                <li>Scalable security solutions</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Creative Leadership</h2>
+        <h3>Publishing</h3>
+        <ul>
+            <li>Founder of Dominate Publishing (est. 2018)</li>
+            <li>Successfully relaunched after overcoming market challenges</li>
+            <li>Published diverse portfolio including social commentary works</li>
+            <li>Collaborative partnerships with key industry figures</li>
+        </ul>
+
+        <h3>Digital Content Creation</h3>
+        <ul>
+            <li>Host of "Mzansi Revolution 4.0" podcast</li>
+            <li>Focus on AI, Fourth Industrial Revolution, and South African tech evolution</li>
+            <li>Professional graphic design services for high-profile events</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Vision & Future Directions</h2>
+        <h3>Strategic Initiatives</h3>
+        <ul>
+            <li><strong>Agricultural Innovation:</strong> IoT integration, data analytics, market access improvement</li>
+            <li><strong>AI Integration:</strong> Publishing automation, educational content, creative writing assistance</li>
+            <li><strong>Community Tech:</strong> Safety networks, digital literacy, rural connectivity</li>
+        </ul>
+    </div>
+
+    <div class="quote">
+        "Books are the driving force of progress"
+    </div>
+
+    <p class="footer">Updated: January 2025</p>
+</body>
+</html>
